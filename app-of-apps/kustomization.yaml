@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: test-rhoai-demo-app 
+  janus-idp.io/tekton: test-rhoai-demo-app
+  backstage.io/kubernetes-id: test-rhoai-demo-app
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: test-rhoai-demo-app
+resources: 
+- application-dev.yaml
